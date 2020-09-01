@@ -40,3 +40,23 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const h1 = document.querySelector('h1')
+h1.textContent = siteContent['cta']['h1']
+
+const ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent['cta']['button']
+
+const image = document.getElementById('cta-img')
+image.setAttribute('src', siteContent['cta']['img-src'])
+
+// This inserts the header text
+const tag = document.getElementsByTagName('a');
+const values = Object.values(siteContent['nav'])
+
+for (i = 0; i < tag.length; i++) {
+  tag[i].textContent = values[i];
+}
+// 
+
